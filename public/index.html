@@ -1,108 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/jpeg" href="%PUBLIC_URL%/code-jam.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a192f" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jamilah Duarte is a software and AI developer and GoHighLevel automation specialist. She builds web and mobile apps, AI chatbots and voice agents, and GHL funnels, pipelines, and workflows.">
+<meta name="author" content="Jamilah Marram Duarte">
+<link rel="canonical" href="https://www.jamilahduarte.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jamilahduarte.com/">
+<meta property="og:title" content="Jamilah Duarte | Software & AI Developer, GoHighLevel Specialist">
+<meta property="og:description" content="Web and mobile apps, AI chatbots and voice agents, and GoHighLevel automations for growing businesses.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0B7A66">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B7A66'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%23fff'%3EJD%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jamilah Marram Duarte","alternateName":"Jamilah Duarte","jobTitle":"Software & AI Developer, GoHighLevel Automation Specialist","url":"https://www.jamilahduarte.com/","email":"mailto:jamilahmarram@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Tagum City","addressCountry":"PH"},"sameAs":["https://github.com/JamDev15"],"knowsAbout":["GoHighLevel","AI chatbots","RAG","LangChain","Python","React","React Native","Shopify","WordPress"]}</script>
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Jamilah Duarte | Software & AI Developer, GoHighLevel Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single 1040px column; hero, then a bento grid of bordered panels; workflow strip as the signature motif */
+:root{
+  --bg:#F5F7F6; --surface:#FFFFFF; --ink:#13181B; --muted:#5B6668; --line:#DDE3E1;
+  --accent:#0B7A66; --accent-soft:#E2F2EE; --chip:#EEF2F1;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1113; --surface:#141A1D; --ink:#E6ECEA; --muted:#93A09F; --line:#253033;
+  --accent:#3DD3B2; --accent-soft:#12302A; --chip:#1B2326; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1113; --surface:#141A1D; --ink:#E6ECEA; --muted:#93A09F; --line:#253033;
+  --accent:#3DD3B2; --accent-soft:#12302A; --chip:#1B2326; color-scheme:dark}
 
-    <!-- Primary Meta -->
-    <title>
-      Jamilah Duarte — AI Developer & Automation Specialist & Web Developer &
-      E-Commerce Developer & GHL Specialist
-    </title>
-    <meta
-      name="description"
-      content="Portfolio of Jamilah Marram Duarte. I build custom chatbots, AI avatars, text-to-speech bots on your data, and high-performance websites with streamlined workflows."
-    />
-    <meta name="author" content="Jamilah Marram Duarte" />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://jamduarte.dev/" />
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;margin:0;padding-inline:20px;padding-block:28px 80px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Jamilah Duarte" />
-    <meta
-      property="og:title"
-      content="Jamilah Duarte — Web Developer & AI Automation Specialist"
-    />
-    <meta
-      property="og:description"
-      content="Custom AI (chatbots, avatars, TTS) + fast, scalable websites."
-    />
-    <meta property="og:url" content="https://jamduarte.dev/" />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-family:var(--mono);font-size:14px;font-weight:500;text-decoration:none}
+.brand b{color:var(--accent);font-weight:500}
+.top nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.top nav a{font-size:14px;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px}
+.top nav a:hover{color:var(--ink);background:var(--chip)}
+.iconbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:36px;height:36px;border-radius:10px;cursor:pointer;display:grid;place-items:center}
+.iconbtn svg{width:18px;height:18px}
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Jamilah Duarte — Web Developer & AI Automation Specialist"
-    />
-    <meta
-      name="twitter:description"
-      content="Custom AI (chatbots, avatars, TTS) + fast, scalable websites."
-    />
-    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
-    <!-- <meta name="twitter:creator" content="@yourhandle" /> -->
+/* hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding-block:28px 8px}
+.avatar{width:132px;height:132px;border-radius:24px;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-size:52px;font-weight:700;letter-spacing:-.02em;overflow:hidden;position:relative}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;position:absolute;inset:0}
+.hero h1{font-size:clamp(32px,5vw,50px);font-weight:700;letter-spacing:-.025em;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.04em;color:var(--accent);background:var(--accent-soft);padding:5px 10px;border-radius:999px}
+.status i{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.role{font-size:clamp(17px,2.2vw,20px);margin:8px 0 4px;font-weight:500}
+.loc{color:var(--muted);font-size:15px;display:flex;align-items:center;gap:6px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--body);padding:11px 18px;border-radius:11px;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:16px;height:16px}
 
-    <!-- Icons / PWA -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="%PUBLIC_URL%/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="%PUBLIC_URL%/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="%PUBLIC_URL%/favicon-16x16.png"
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <meta name="apple-mobile-web-app-title" content="Jamilah Duarte" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+/* workflow strip — signature motif */
+.flow{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:18px 20px;display:flex;align-items:center;gap:10px;overflow-x:auto}
+.flow .label{flex:none;margin-right:6px}
+.node{flex:none;font-family:var(--mono);font-size:13px;padding:8px 12px;border-radius:9px;border:1px solid var(--line);background:var(--bg);white-space:nowrap}
+.node.on{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.arrow{flex:none;color:var(--muted);font-family:var(--mono)}
 
-    <!-- Fonts (optional) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.panel{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:24px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.span2{grid-column:span 2}.span3{grid-column:1/-1}
+.panel h2{font-size:21px;font-weight:700;letter-spacing:-.01em}
+.panel p{margin:0;color:var(--muted)}
+.panel p strong{color:var(--ink);font-weight:600}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jamilah Marram Duarte",
-        "jobTitle": "Web Developer, AI & Automation Specialist",
-        "url": "https://jamduarte.dev/",
-        "email": "mailto:jamilahmarram@gmail.com",
-        "image": "https://jamduarte.dev/og-image.jpg",
-        "sameAs": [
-          "https://github.com/JamDev15",
-          "https://www.linkedin.com/in/jamilah-marram-duarte-a51900259/",
-          "https://instagram.com/yourinstagram"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Davao City",
-          "addressCountry": "PH"
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;position:relative}
+.tl:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:12px 1fr;gap:14px}
+.dot{width:11px;height:11px;border-radius:50%;border:2px solid var(--line);background:var(--surface);margin-top:6px;position:relative}
+.tl li:first-child .dot{border-color:var(--accent);background:var(--accent)}
+.tl b{display:block;font-weight:600;font-size:15px;line-height:1.35}
+.tl span{font-size:14px;color:var(--muted)}
+.tl em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.stack h3{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13.5px;padding:5px 10px;border-radius:8px;background:var(--chip);white-space:nowrap}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.svc div{padding:16px;border-radius:11px;background:var(--bg);border:1px solid var(--line)}
+.svc b{display:block;font-family:var(--display);font-size:17px;margin-bottom:4px}
+.svc p{font-size:14.5px}
+
+/* projects */
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:500 13px var(--mono);padding:6px 11px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.proj{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:11px;border:1px solid var(--line);background:var(--bg);text-decoration:none;transition:border-color .15s}
+.proj:hover{border-color:var(--accent)}
+.proj .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.proj b{font-family:var(--display);font-size:17px;line-height:1.25}
+.proj span{font-size:14px;color:var(--muted)}
+.proj .url{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:6px;display:flex;justify-content:space-between}
+
+/* lists */
+.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.list li{display:flex;justify-content:space-between;gap:12px;font-size:15px;border-bottom:1px dashed var(--line);padding-bottom:10px}
+.list li:last-child{border:0;padding:0}
+.list em{font-style:normal;font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.contact p{color:inherit;opacity:.75}
+.contact h2{font-size:clamp(24px,3.4vw,34px)}
+.mail{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mail code{font-family:var(--mono);font-size:15px;padding:10px 14px;border-radius:10px;background:rgba(127,127,127,.18);user-select:all;word-break:break-all}
+.contact .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.contact .btn.ghost{background:transparent;color:var(--bg);border-color:rgba(127,127,127,.5)}
+footer{text-align:center;color:var(--muted);font-size:13px;font-family:var(--mono);padding-top:10px}
+
+/* chat */
+.chat-toggle{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;border:0;background:var(--accent);color:var(--bg);font:600 14px var(--body);cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.chat{position:fixed;right:20px;bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:20;width:min(360px,calc(100vw - 40px));max-height:min(480px,70vh);display:flex;flex-direction:column;border:1px solid var(--line);background:var(--surface);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.2);overflow:hidden}
+.chat header{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.chat header b{font-family:var(--display);font-size:16px}
+.chat .msgs{padding:14px;display:flex;flex-direction:column;gap:10px;overflow-y:auto;flex:1}
+.msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.5}
+.msg.bot{background:var(--chip);align-self:flex-start}
+.msg.me{background:var(--accent);color:var(--bg);align-self:flex-end}
+.quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 14px}
+.quick button{font:500 13px var(--body);padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.quick button:hover{border-color:var(--accent)}
+
+@media (max-width:860px){
+  .grid{grid-template-columns:1fr}.span2,.span3{grid-column:auto}
+  .stack{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .svc,.projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  body{padding-inline:16px}
+  .hero{grid-template-columns:1fr;gap:18px}
+  .avatar{width:96px;height:96px;font-size:38px;border-radius:20px}
+  .top nav a.hide-sm{display:none}
+  .stack,.svc,.projects{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">jamilah<b>.</b>duarte</a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="#about">About</a>
+      <a class="hide-sm" href="#work">Work</a>
+      <a class="hide-sm" href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+      <button class="iconbtn" id="theme" type="button" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="avatar">JD<img src="profile.jpg" alt="Photo of Jamilah Duarte" onerror="this.remove()"></div>
+    <div>
+      <h1>Jamilah Duarte <span class="status"><i></i>Open to long-term roles</span></h1>
+      <p class="role">Software &amp; AI Developer · GoHighLevel Automation Specialist</p>
+      <p class="loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Tagum City, Philippines · Working remotely with US teams</p>
+      <div class="cta">
+        <a class="btn primary" href="https://calendly.com/jamduarte" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>Book a call</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Resume</a>
+        <a class="btn" href="https://github.com/JamDev15" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/jamilah-marram-duarte-a51900259/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V21H9z"/></svg>LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="flow" aria-label="How I connect your systems">
+    <span class="label">What I build</span>
+    <span class="node">Form / Call / Chat</span><span class="arrow">→</span>
+    <span class="node on">AI agent answers</span><span class="arrow">→</span>
+    <span class="node">GHL pipeline</span><span class="arrow">→</span>
+    <span class="node on">SMS + email follow-up</span><span class="arrow">→</span>
+    <span class="node">Custom app / dashboard</span><span class="arrow">→</span>
+    <span class="node">Booked client</span>
+  </div>
+
+  <div class="grid">
+    <section class="panel span2" id="about">
+      <h2>About</h2>
+      <p>I'm a <strong>software and AI developer</strong> with a Computer Engineering degree. I build web and mobile apps, AI chatbots and voice agents, and the <strong>GoHighLevel systems</strong> that capture leads and follow up with them automatically.</p>
+      <p>Most of my work is for US businesses in signage, home services, e-commerce, health products, and online education. I like jobs where the code, the AI, and the CRM all have to work together, because I can build all three and connect them.</p>
+      <p>Recent wins: I audited a client CRM and <strong>restored 20 lost opportunities</strong>, rebuilt <strong>29 answers</strong> across client AI knowledge bases, and shipped AI chat and course platforms that are live today.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <ol class="tl">
+        <li><div class="dot"></div><div><b>GoHighLevel &amp; Software Developer</b><span>Ikonic · Denver, CO</span><br><em>2026 – Present</em></div></li>
+        <li><div class="dot"></div><div><b>Software Dev &amp; SEO / AEO Specialist</b><span>Halo Private Label</span><br><em>2025</em></div></li>
+        <li><div class="dot"></div><div><b>GoHighLevel &amp; Shopify Specialist</b><span>Nell Tax IT LLC</span><br><em>2024 – 2025</em></div></li>
+        <li><div class="dot"></div><div><b>Software &amp; AI Developer</b><span>FWF LLC</span><br><em>2023 – 2025</em></div></li>
+        <li><div class="dot"></div><div><b>Freelance Software &amp; AI Developer</b><span>Tractive World, Apeiron LLC, and others</span><br><em>2022 – 2024</em></div></li>
+      </ol>
+    </section>
+
+    <section class="panel span3" id="stack">
+      <div class="head"><h2>Tech stack</h2><span class="label">Tools I ship with</span></div>
+      <div class="stack">
+        <div><h3>AI</h3><div class="chips"><span class="chip">OpenAI / LLM APIs</span><span class="chip">LangChain</span><span class="chip">Pinecone</span><span class="chip">RAG</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">NLP</span><span class="chip">Voice agents</span></div></div>
+        <div><h3>Software</h3><div class="chips"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">React Native</span><span class="chip">PHP</span><span class="chip">MongoDB</span><span class="chip">REST APIs</span><span class="chip">Vercel</span><span class="chip">Render</span></div></div>
+        <div><h3>CRM &amp; Automation</h3><div class="chips"><span class="chip">GoHighLevel</span><span class="chip">Workflows</span><span class="chip">Funnels</span><span class="chip">Pipelines</span><span class="chip">A2P setup</span><span class="chip">HubSpot</span></div></div>
+        <div><h3>Web &amp; SEO</h3><div class="chips"><span class="chip">Shopify Liquid</span><span class="chip">WordPress</span><span class="chip">Elementor</span><span class="chip">CheckoutChamp</span><span class="chip">Search Console</span><span class="chip">AEO</span></div></div>
+      </div>
+    </section>
+
+    <section class="panel span3" aria-labelledby="svc-h">
+      <div class="head"><h2 id="svc-h">How I can help</h2><span class="label">Services</span></div>
+      <div class="svc">
+        <div><b>AI chatbots &amp; voice agents</b><p>Assistants trained on your business that answer customers, qualify leads, and hand off to your team.</p></div>
+        <div><b>GoHighLevel systems</b><p>Funnels, pipelines, workflows, calendars, and SMS/email follow-up that run without babysitting.</p></div>
+        <div><b>Custom web &amp; mobile apps</b><p>Dashboards, internal tools, and full-stack apps in Python, React, and React Native.</p></div>
+      </div>
+    </section>
+
+    <section class="panel span3" id="work">
+      <div class="head">
+        <h2>Recent work</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" data-f="all" aria-pressed="true">All</button>
+          <button type="button" data-f="ai" aria-pressed="false">AI</button>
+          <button type="button" data-f="ghl" aria-pressed="false">GoHighLevel</button>
+          <button type="button" data-f="shopify" aria-pressed="false">Shopify</button>
+          <button type="button" data-f="wp" aria-pressed="false">WordPress</button>
+        </div>
+      </div>
+      <div class="projects" id="projects">
+        <a class="proj" data-c="ai" href="https://app.thefinders.org/" target="_blank" rel="noopener"><span class="tag">AI platform</span><b>The Finders</b><span>Course platform with dual AI chatbots and text-to-voice answers.</span><span class="url">app.thefinders.org<span>↗</span></span></a>
+        <a class="proj" data-c="ai" href="https://yoursurvivalexpert.ai/" target="_blank" rel="noopener"><span class="tag">AI platform</span><b>Your Survival Expert</b><span>AI chat agent and course pages for survival training.</span><span class="url">yoursurvivalexpert.ai<span>↗</span></span></a>
+        <a class="proj" data-c="ghl" href="https://ikonic303.com/" target="_blank" rel="noopener"><span class="tag">GoHighLevel</span><b>Ikonic</b><span>Signage and marketing site with lead capture and CRM workflows.</span><span class="url">ikonic303.com<span>↗</span></span></a>
+        <a class="proj" data-c="ghl" href="https://towcoloradosprings.com/" target="_blank" rel="noopener"><span class="tag">GHL funnel</span><b>Tow Colorado Springs</b><span>Lead funnel for a local towing company.</span><span class="url">towcoloradosprings.com<span>↗</span></span></a>
+        <a class="proj" data-c="ghl" href="https://www.coloradospringstowtrucks.com/" target="_blank" rel="noopener"><span class="tag">GHL funnel</span><b>Colorado Springs Tow Trucks</b><span>Second towing funnel built to capture emergency calls.</span><span class="url">coloradospringstowtrucks.com<span>↗</span></span></a>
+        <a class="proj" data-c="ghl" href="https://dencorooterdrain.com/" target="_blank" rel="noopener"><span class="tag">GoHighLevel</span><b>Denco Rooter &amp; Drain</b><span>Plumbing service website built in GoHighLevel.</span><span class="url">dencorooterdrain.com<span>↗</span></span></a>
+        <a class="proj" data-c="ghl" href="https://trailsidetidy.com/" target="_blank" rel="noopener"><span class="tag">GoHighLevel</span><b>Trailside Tidy</b><span>Service business website built in GoHighLevel.</span><span class="url">trailsidetidy.com<span>↗</span></span></a>
+        <a class="proj" data-c="ghl" href="https://dashjrentals.com/" target="_blank" rel="noopener"><span class="tag">GoHighLevel</span><b>Dash J Rentals</b><span>Rental business website built in GoHighLevel.</span><span class="url">dashjrentals.com<span>↗</span></span></a>
+        <a class="proj" data-c="shopify" href="https://vnsh.com/" target="_blank" rel="noopener"><span class="tag">Shopify</span><b>VNSH</b><span>Shopify store with theme customization and product setup.</span><span class="url">vnsh.com<span>↗</span></span></a>
+        <a class="proj" data-c="shopify" href="https://painsafari.com/" target="_blank" rel="noopener"><span class="tag">Shopify</span><b>Pain Safari</b><span>Shopify storefront and checkout setup.</span><span class="url">painsafari.com<span>↗</span></span></a>
+        <a class="proj" data-c="shopify" href="https://modernneeds.com/" target="_blank" rel="noopener"><span class="tag">Shopify</span><b>Modern Needs</b><span>Shopify store build and theme work.</span><span class="url">modernneeds.com<span>↗</span></span></a>
+        <a class="proj" data-c="shopify" href="https://www.paintmelike.co/" target="_blank" rel="noopener"><span class="tag">Shopify</span><b>Paint Me Like</b><span>Shopify store for custom portrait products.</span><span class="url">paintmelike.co<span>↗</span></span></a>
+        <a class="proj" data-c="wp ai" href="https://halohydration.com/" target="_blank" rel="noopener"><span class="tag">WordPress · AI</span><b>Halo Private Label</b><span>WordPress site, AI chatbot, and SEO / AEO work for a supplement manufacturer.</span><span class="url">halohydration.com<span>↗</span></span></a>
+        <a class="proj" data-c="wp" href="https://webbrilliantcompany.com/" target="_blank" rel="noopener"><span class="tag">WordPress</span><b>Web Brilliant Company</b><span>Company website built in WordPress.</span><span class="url">webbrilliantcompany.com<span>↗</span></span></a>
+        <a class="proj" data-c="ai ghl" href="https://docs.google.com/document/d/1o4AchR5XGtQv84ibyEs83ts5jY4fbnhAgvM-IghDJpU/edit?usp=sharing" target="_blank" rel="noopener"><span class="tag">Automation</span><b>Workflows &amp; AI agents</b><span>Write-ups of pipelines, workflows, and AI agents I've built.</span><span class="url">View document<span>↗</span></span></a>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="edu-h">
+      <h2 id="edu-h">Education</h2>
+      <ul class="list">
+        <li><span>BS Computer Engineering</span><em>2018 – 2024</em></li>
+        <li><span>Senior High School, ICT</span><em>2017 – 2018</em></li>
+        <li><span>High School, With Honors</span><em>2013 – 2017</em></li>
+      </ul>
+    </section>
+    <section class="panel" aria-labelledby="cert-h">
+      <h2 id="cert-h">Certifications</h2>
+      <ul class="list">
+        <li><span>Machine Learning</span><em>Certificate</em></li>
+        <li><span>Python Development</span><em>Certificate</em></li>
+        <li><span>Java Development</span><em>Certificate</em></li>
+      </ul>
+    </section>
+    <section class="panel" aria-labelledby="aw-h">
+      <h2 id="aw-h">Awards</h2>
+      <ul class="list">
+        <li><span>Programmer of the Year</span><em>Award</em></li>
+        <li><span>Meritorious Award</span><em>Award</em></li>
+        <li><span>English, Filipino</span><em>Languages</em></li>
+      </ul>
+    </section>
+
+    <section class="panel span3 contact" id="contact">
+      <h2>Need a developer who can build the app, the AI, and the automation?</h2>
+      <p>I'm looking for a long-term role or ongoing project. Send me a short note about what you need, and I'll reply with relevant examples.</p>
+      <div class="mail">
+        <code id="email">jamilahmarram@gmail.com</code>
+        <button class="btn" id="copy" type="button">Copy email</button>
+        <a class="btn" href="https://calendly.com/jamduarte" target="_blank" rel="noopener">Book a call</a>
+        <a class="btn ghost" href="mailto:jamilahmarram@gmail.com?subject=Project%20inquiry">Open email app</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2026 Jamilah Marram Duarte</footer>
+</div>
+
+<button class="chat-toggle" id="chatBtn" type="button" aria-expanded="false" aria-controls="chat">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Quick questions
+</button>
+<div class="chat" id="chat" hidden role="dialog" aria-label="Quick questions about Jamilah">
+  <header><b>Ask about Jamilah</b><button class="iconbtn" id="chatClose" type="button" aria-label="Close">✕</button></header>
+  <div class="msgs" id="msgs" aria-live="polite">
+    <div class="msg bot">Hi! Pick a question below and I'll answer from Jamilah's profile.</div>
+  </div>
+  <div class="quick" id="quick"></div>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{var saved=localStorage.getItem("theme");if(saved)root.setAttribute("data-theme",saved);}catch(e){}
+  document.getElementById("theme").addEventListener("click",function(){
+    var cur=root.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+    var next=cur==="dark"?"light":"dark";root.setAttribute("data-theme",next);
+    try{localStorage.setItem("theme",next);}catch(e){}
+  });
+
+  var btns=document.querySelectorAll(".filters button"),cards=document.querySelectorAll(".proj");
+  btns.forEach(function(b){b.addEventListener("click",function(){
+    btns.forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    var f=b.dataset.f;cards.forEach(function(c){c.hidden=!(f==="all"||c.dataset.c.split(" ").indexOf(f)>-1)});
+  })});
+
+  var copy=document.getElementById("copy");
+  copy.addEventListener("click",function(){
+    var t="jamilahmarram@gmail.com";
+    function done(){copy.textContent="Copied";setTimeout(function(){copy.textContent="Copy email"},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("email"));var s=getSelection();s.removeAllRanges();s.addRange(r);copy.textContent="Press Ctrl+C"}
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,sel)}else sel();
+  });
+
+  var qa=[
+    ["What does she do?","Jamilah is a software and AI developer and GoHighLevel automation specialist. She builds web and mobile apps, AI chatbots and voice agents, and GHL funnels, pipelines, and workflows."],
+    ["GoHighLevel experience?","Websites, funnels, pipelines, workflows, triggers, forms, calendars, SMS/email follow-up, domain setup, A2P registration, and AI conversation and voice agents. She currently manages GHL sub-accounts for signage and marketing clients."],
+    ["AI experience?","AI chatbots with RAG (LangChain, Pinecone, OpenAI), text-to-voice assistants, and machine learning with TensorFlow and Keras. Live examples: app.thefinders.org and yoursurvivalexpert.ai."],
+    ["Tech stack?","Python, JavaScript, React, React Native, PHP, MongoDB, REST APIs, Vercel and Render, plus Shopify, WordPress, and HubSpot."],
+    ["Is she available?","Yes. She's looking for a long-term role or ongoing project and works remotely with US teams."],
+    ["How do I contact her?","Book a call at calendly.com/jamduarte, or email jamilahmarram@gmail.com."]
+  ];
+  var msgs=document.getElementById("msgs"),quick=document.getElementById("quick"),chat=document.getElementById("chat"),cb=document.getElementById("chatBtn");
+  function add(t,who){var d=document.createElement("div");d.className="msg "+who;d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
+  qa.forEach(function(p){var b=document.createElement("button");b.type="button";b.textContent=p[0];b.onclick=function(){add(p[0],"me");setTimeout(function(){add(p[1],"bot")},250)};quick.appendChild(b)});
+  function toggle(open){chat.hidden=!open;cb.setAttribute("aria-expanded",open)}
+  cb.onclick=function(){toggle(chat.hidden)};document.getElementById("chatClose").onclick=function(){toggle(false)};
+})();
+</script>
+
+</body>
 </html>
